@@ -565,6 +565,7 @@ class WxPayApi
 		}
 		curl_setopt($ch,CURLOPT_URL, $url);
 		curl_setopt($ch,CURLOPT_SSL_VERIFYPEER,TRUE);
+		// TODO:NOTICE 设为 2 微信支付服务会严格检测后端服务的证书 要配置证书
 		curl_setopt($ch,CURLOPT_SSL_VERIFYHOST,2);//严格校验
 		curl_setopt($ch,CURLOPT_USERAGENT, $ua); 
 		//设置header
